@@ -8,6 +8,6 @@ pushd ${PROJECT_FOLDER}/pm-database
 
 docker build \
      --platform=$PLATFORM \
-     -t rimvanvliet/pm-database:${VERSION} .
+     -t plusmin/pm-database:${VERSION} .
 
 popd
