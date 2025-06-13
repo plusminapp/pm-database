@@ -11,6 +11,8 @@ COPY resources/.pgpass .pgpass
 RUN chown 1001:root .pgpass
 RUN chmod 0600 .pgpass
 
+COPY resources/db-init/db-init.sql /docker-entrypoint-initdb.d/db-init.sql
+
 RUN mkdir -p /bitnami/postgresql/data
 RUN chown 1001:root /bitnami/postgresql/data
 
